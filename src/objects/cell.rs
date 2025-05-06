@@ -1,8 +1,3 @@
-mod settings;
-mod cursor;
-
-use cursor::Cursor;
-
 pub enum CellType {
     EMPTY,
     MINE,
@@ -25,9 +20,4 @@ pub enum CellState {
 pub struct Cell {
     cell_type: CellType,
     cell_state: CellState,
-}
-
-pub struct Field {
-    cells: [[Cell; settings::FIELD_WIDTH]; settings::FIELD_HEIGHT],
-    cursor: Cursor,
 }
